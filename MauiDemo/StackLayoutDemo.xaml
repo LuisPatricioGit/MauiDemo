@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiDemo.StackLayoutDemo"
+             Title="StackLayoutDemo">
+
+    <VerticalStackLayout Margin="20" HorizontalOptions="Start">
+        <HorizontalStackLayout VerticalOptions="Start">
+            <Label Text="Nome"></Label>
+            <Entry WidthRequest="150" HeightRequest="30"></Entry>
+            <Label Text="Insira um nome" TextColor="Red" ></Label>
+        </HorizontalStackLayout>
+        <HorizontalStackLayout VerticalOptions="Start">
+            <Label Text="Idade"></Label>
+            <Entry WidthRequest="150" HeightRequest="30"></Entry>
+            <Label Text="Insira um nome" TextColor="Red" ></Label>
+        </HorizontalStackLayout>
+    </VerticalStackLayout>
+    
+    <!--<StackLayout Margin="20">
+        <Label 
+            Text="Texto 1"
+            FontSize="20"
+            BackgroundColor="Yellow"
+            VerticalOptions="Start"/>
+        <Label 
+            Text="Texto 2"
+            FontSize="20"
+            BackgroundColor="Blue"
+            VerticalOptions="Center"/>
+        <Label 
+            Text="Texto 3"
+            FontSize="20"
+            BackgroundColor="Red"
+            VerticalOptions="End"/>
+        <StackLayout Margin="20" Padding="20,10,20,0">
+            <Label 
+                Text="Texto 4"
+                FontSize="20"
+                Margin="20"
+                BackgroundColor="Green"
+                VerticalOptions="Fill"/>
+            <Label 
+                Text="Texto 5"
+                FontSize="20"
+                Margin="10,15"
+                BackgroundColor="Aqua"/>
+            <Label 
+                Text="Texto 6"
+                FontSize="20"
+                Margin="0,20,15,5"
+                BackgroundColor="Salmon"/>
+        </StackLayout>
+    </StackLayout>-->
+    <!--<StackLayout Margin="20">
+            <Frame BorderColor="Black"
+                   Padding="5">
+                <StackLayout Orientation="Horizontal"
+                             Spacing="15">
+                    <BoxView Color="Red"
+                             WidthRequest="40"/>
+                    <Label Text="Red"
+                           FontSize="18"
+                           VerticalOptions="Center"/>
+                </StackLayout>
+            </Frame>
+            <Frame BorderColor="Black"
+                   Padding="5">
+                <StackLayout Orientation="Horizontal"
+                             Spacing="15">
+                    <BoxView Color="Yellow"
+                             WidthRequest="40"/>
+                    <Label Text="Yellow"
+                           FontSize="18"
+                           VerticalOptions="Center"/>
+                </StackLayout>
+            </Frame>
+            <Frame BorderColor="Black"
+                   Padding="5">
+                <StackLayout Orientation="Horizontal"
+                             Spacing="15">
+                    <BoxView Color="Blue"
+                             WidthRequest="40"/>
+                    <Label Text="Blue"
+                           FontSize="18"
+                           VerticalOptions="Center"/>
+                </StackLayout>
+            </Frame>
+    </StackLayout>-->
+    <!--<StackLayout Margin="20">
+        <Label Text="SIGN IN" FontSize="24"/>
+        <Entry Placeholder="Usuario" PlaceholderColor="Black"/>
+        <Entry Placeholder="Senha" PlaceholderColor="Black"/>
+        <Button Text="LOG IN" FontSize="Large"/>
+    </StackLayout>-->
+</ContentPage>

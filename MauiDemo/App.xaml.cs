@@ -11,7 +11,7 @@
             navPage.BarBackground = Colors.Red;
             navPage.BarTextColor = Colors.Blue;
 
-            MainPage = new TabbedPageDemo();
+            MainPage = new StackLayoutDemo();
         }
 
         //protected override Window CreateWindow(IActivationState? activationState)
