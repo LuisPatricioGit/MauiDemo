@@ -6,12 +6,12 @@
         {
             InitializeComponent();
 
-            var navPage = new NavigationPage(new MyPage());
+            //var navPage = new NavigationPage(new MyPage());
 
-            navPage.BarBackground = Colors.Red;
-            navPage.BarTextColor = Colors.Blue;
+            //navPage.BarBackground = Colors.Red;
+            //navPage.BarTextColor = Colors.Blue;
 
-            MainPage = new StackLayoutDemo();
+            MainPage = new NavigationPage(new GridLayoutDemo());
         }
 
         //protected override Window CreateWindow(IActivationState? activationState)
