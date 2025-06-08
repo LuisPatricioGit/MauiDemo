@@ -11,7 +11,7 @@
             //navPage.BarBackground = Colors.Red;
             //navPage.BarTextColor = Colors.Blue;
 
-            MainPage = new NavigationPage(new FlexLayoutDemo());
+            MainPage = new NavigationPage(new AbsoluteLayoutDemo());
         }
 
         //protected override Window CreateWindow(IActivationState? activationState)

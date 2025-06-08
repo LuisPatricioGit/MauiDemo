@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiControls.Pages.MauiPresentationControls"
+             Title="Maui Presentation Controls">
+    <ScrollView>
+        <VerticalStackLayout Padding="10" Spacing="15">
+            <BoxView Color="CornflowerBlue"
+                     CornerRadius="20"
+                     WidthRequest="200"
+                     HeightRequest="200"
+                     VerticalOptions="Center"
+                     HorizontalOptions="Start"
+                     Background="Transparent"/>
+
+            <Label Text="Bem Vindo &#10; ao .Net MAUI!"
+                   CharacterSpacing="2"
+                   BackgroundColor="Yellow"
+                   TextColor="Black"
+                   HorizontalTextAlignment="Center"
+                   FontSize="Large"
+                   FontAttributes="Bold"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"/>
+
+            <Label Text="This is a very long text that i just came up with. It has no purpose of use and lorem upsum should have been used, however it still proves the point of showing 4 lines as requested."
+                   FontSize="Medium"
+                   LineHeight=".8"
+                   MaxLines="4" />
+
+            <Label Text="Texto em &lt;strong style=&quot;color;red&quot;&gt;Html"
+                   FontSize="Large"
+                   TextColor="Black"
+                   BackgroundColor="Yellow"
+                   TextType="Html"/>
+
+            <Label Text="Texto Sublinhado"
+                   FontSize="Large"
+                   TextDecorations="Underline" />
+            <Label Text="Texto Riscado"
+                   FontSize="Large"
+                   TextDecorations="Strikethrough" />
+            <Label Text="Texto Riscado e Sublinhado"
+                   FontSize="Large"
+                   TextDecorations="Underline,Strikethrough" />
+
+            <Label Text="Este texto será exibido em Caps Lock."
+                   FontSize="Large"
+                   TextTransform="Uppercase" />
+            <Label Text="Este texto será exibido em minusculas."
+                   FontSize="Large"
+                   TextTransform="Lowercase" />
+
+            <Ellipse Fill="Yellow"
+                     Stroke="Blue"
+                     StrokeThickness="10"
+                     HeightRequest="80"
+                     WidthRequest="150"
+                     HorizontalOptions="Center"/>
+
+            <Line Stroke="Black"
+                  X1="0"
+                  Y1="0"
+                  X2="300"
+                  Y2="50"
+                  StrokeThickness="5"/>
+
+            <Rectangle Fill="Green"
+                       Stroke="Black"
+                       StrokeThickness="5"
+                       HeightRequest="150"
+                       WidthRequest="150"
+                       HorizontalOptions="End"
+                       RadiusX="50"
+                       RadiusY="50"/>
+
+            <Polygon Points="40,10 70,80 10, 50"
+                     Fill="LightBlue"
+                     Stroke="DarkBlue"
+                     StrokeThickness="5"/>
+
+            <Polyline Points="0,0 10, 30,
+                      15,0 18, 60
+                      23,30 35,30 40,0
+                      43, 60 48,30 100, 30"
+                      Stroke="Red"/>
+
+            <Path Data="M 10,100 L 100,100 100,50Z"
+                  Aspect="Uniform"
+                  HorizontalOptions="Center"
+                  Stroke="Black" />
+
+            <Border Stroke="#C49B33"
+                    StrokeThickness="4"
+                    StrokeShape="RoundRectangle 40,0,0,40"
+                    Background="#2B0B98"
+                    Padding="16,8"
+                    HorizontalOptions="Center">
+                <Label Text="Texto de Boas vindas"
+                       TextColor="White"
+                       FontSize="18"
+                       FontAttributes="Bold"/>
+            </Border>
+
+            <Image Source="dotnet_bot.png"
+                   Aspect="AspectFit"/>
+
+            <Image Source="https://i.imgur.com/30oqq8Y.png"
+                   Aspect="AspectFit"
+                   HeightRequest="400"
+                   WidthRequest="400"/>
+
+            <Image Source="https://i.imgur.com/bHA8KE7.gif"
+                   Aspect="AspectFit"
+                   HeightRequest="100"
+                   WidthRequest="200"
+                   IsAnimationPlaying="True"/>
+
+            <Frame CornerRadius="200">
+                <Image Source="dotnet_bot.png"/>
+            </Frame>
+
+            <Frame BorderColor="Gray"
+                   CornerRadius="5"
+                   Padding="8">
+                <StackLayout>
+                    <Label Text="Exemplo Carta"
+                           FontSize="30"
+                           FontAttributes="Bold"/>
+                    <BoxView Color="Gray"
+                             HeightRequest="2"
+                             HorizontalOptions="Fill"/>
+                    <Label Text="Frame e Stacklayout"
+                           FontSize="20"/>
+                </StackLayout>
+            </Frame>
+
+            <WebView HeightRequest="500"
+                     Source="https://www.google.pt"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
