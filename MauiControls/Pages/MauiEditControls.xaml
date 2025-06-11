@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiControls.Pages.MauiEditControls"
+             Title="Maui Edit Controls">
+    
+    <VerticalStackLayout>
+        <!--<Entry x:Name="entry1"
+               Placeholder="Insira dados para o Entry..."
+               PlaceholderColor="Blue"
+               FontSize="Medium"
+               IsReadOnly="False"
+               MaxLength="40"
+               IsPassword="False"
+               Keyboard="Text"
+               CharacterSpacing="5"
+               ClearButtonVisibility="Never"
+               ReturnType="Search"
+               TextChanged="entry1_TextChanged"
+               Completed="entry1_Completed"/>
+
+        <Editor x:Name="editor1"
+                Placeholder="Insira dados para o Editor..."
+                PlaceholderColor="Black"
+                FontSize="Large"
+                AutoSize="TextChanges"
+                IsReadOnly="False"
+                Keyboard="Text"
+                CharacterSpacing="1"/>
+
+        <StackLayout Padding="40" Spacing="40">
+            <Label Text="Indicador de Actividade"
+                   FontSize="Large"
+                   HorizontalOptions="Center"/>
+            <ActivityIndicator IsRunning="True"
+                               Color="Orange"/>
+        </StackLayout>
+
+        <StackLayout Margin="20">
+            <Label Text="Barra de Progresso"
+                   FontSize="Medium"/>
+            <ProgressBar x:Name="progressBar"
+                         Progress="0.25"
+                         ProgressColor="Red"/>
+            <Button Text="Progredir até 90%"
+                    BackgroundColor="Gray"
+                    FontSize="Medium"
+                    Clicked="Button_Clicked"/>
+        </StackLayout>-->
+
+        <StackLayout Padding="10">
+            <ActivityIndicator x:Name="IndicadorDeAtividade1"
+                               IsRunning="{Binding IsBusy}"
+                               VerticalOptions="Center"
+                               HorizontalOptions="Center"
+                               Color="Orange"/>
+        </StackLayout>
+
+        <StackLayout Padding="20" 
+                     Spacing="2"
+                     VerticalOptions="CenterAndExpand">
+            <Label Text="Username"
+                   TextColor="#555"
+                   FontSize="20"
+                   FontAttributes="Bold"/>
+            <Entry Keyboard="Text"
+                   Placeholder="Insira o nome de utilizador..."
+                   PlaceholderColor="#CCC"
+                   FontSize="20"
+                   TextColor="#555"/>
+
+            <Label Text="Password"
+                   TextColor="#555"
+                   FontSize="20"
+                   FontAttributes="Bold"/>
+            <Entry Placeholder="Insira a palavra-passe..."
+                   PlaceholderColor="#CCC"
+                   FontSize="20"
+                   TextColor="#555"
+                   Keyboard="Numeric"
+                   IsPassword="True"/>
+        </StackLayout>
+
+        <StackLayout Padding="10"
+                     VerticalOptions="Center"
+                     HorizontalOptions="FillAndExpand">
+            <Button x:Name="btnLogin"
+                    Text="Log in"
+                    FontSize="Large"
+                    BackgroundColor="Blue"/>
+        </StackLayout>
+    </VerticalStackLayout>
+</ContentPage>
