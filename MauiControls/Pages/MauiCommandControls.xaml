@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiControls.Pages.MauiCommandControls"
+             Title="Maui Command Controls">
+
+    <VerticalStackLayout Margin="10">
+        <Button Text="Clique para Rodar o texto!"
+                BackgroundColor="Green"
+                x:Name="btnDemo"
+                Clicked="btnDemo_Clicked"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"/>
+
+        <Label x:Name="lblDemo"
+               Text=".NET MAUI"
+               TextColor="Blue"
+               FontSize="25"
+               FontAttributes="Bold"
+               VerticalOptions="Center"
+               HorizontalOptions="Center"/>
+
+        <Button Text="Clique para Rodar o texto"
+                ImageSource="androidicon.png"
+                BackgroundColor="Green"
+                x:Name="btnDemo2"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                IsEnabled="False"
+                Clicked="btnDemo_Clicked"/>
+
+        <ImageButton Source="dotnet_bot.png"
+                     x:Name="btnImgDemo"
+                     Aspect="AspectFit"
+                     BorderColor="Black"
+                     Clicked="btnImgDemo_Clicked"
+                     HeightRequest="100"
+                     WidthRequest="100"
+                     HorizontalOptions="Center"
+                     VerticalOptions="Center"/>
+
+        <!--<StackLayout Padding="20">
+            <Label Text="Qual é o teu animal favorito?"
+           FontSize="Large"
+           TextColor="Blue"/>
+            <RadioButton Content="Gato" Value="Gato" GroupName="Pets"/>
+            <RadioButton Content="Cão" Value="Cão" GroupName="Pets"/>
+            <RadioButton Content="Peixe" Value="Peixe" GroupName="Pets"/>
+            <RadioButton Content="Pássaro" Value="Pássaro" GroupName="Pets"  IsChecked="True"/>
+        </StackLayout>-->
+        
+        <StackLayout Padding="20"
+                     RadioButtonGroup.GroupName="Pets2">
+            <Label Text="Qual é o teu animal favorito?"
+           FontSize="Large"
+           TextColor="Blue"/>
+            <RadioButton Content="Gato" Value="Gato"
+                         CheckedChanged="RadioButton_CheckedChanged"/>
+            <RadioButton Content="Cão" Value="Cão"
+                         CheckedChanged="RadioButton_CheckedChanged"/>
+            <RadioButton Content="Peixe" Value="Peixe"
+                         CheckedChanged="RadioButton_CheckedChanged"/>
+            <RadioButton Content="Pássaro" Value="Pássaro"
+                         CheckedChanged="RadioButton_CheckedChanged"/>
+            <Label x:Name="lblPets2" Text=""/>
+        </StackLayout>
+
+        <StackLayout>
+            <SearchBar Placeholder="Procurar produto"
+                       SearchButtonPressed="SearchBar_SearchButtonPressed"
+                       BackgroundColor="AliceBlue"/>
+        </StackLayout>
+
+        <SwipeView BackgroundColor="LightCyan">
+            <SwipeView.LeftItems>
+                <SwipeItems>
+                    <SwipeItem BackgroundColor="LightGreen"
+                               IconImageSource="gato.png"
+                               Invoked="SwipeItem_Invoked"
+                               Text="Gato"/>
+                    <SwipeItem BackgroundColor="LightPink"
+                               IconImageSource="peixe.png"
+                               Invoked="SwipeItem_Invoked"
+                               Text="Peixe"/>
+                </SwipeItems>
+            </SwipeView.LeftItems>
+            <SwipeView.RightItems>
+                <SwipeItems>
+                    <SwipeItem BackgroundColor="LemonChiffon"
+                               IconImageSource="cao.png"
+                               Invoked="SwipeItem_Invoked"
+                               Text="Cão"/>    
+                    <SwipeItem BackgroundColor="Azure"
+                               IconImageSource="passaro.png"
+                               Invoked="SwipeItem_Invoked"
+                               Text="Pássaro"/>
+                </SwipeItems>
+            </SwipeView.RightItems>
+            <Grid BackgroundColor="LightGray"
+                  HeightRequest="60"
+                  WidthRequest="300">
+                <Label HorizontalOptions="Center"
+                       Text="&lt;- Deslizar ->"
+                       FontSize="Large"
+                       VerticalOptions="Center"/>
+            </Grid>
+        </SwipeView>
+        
+    </VerticalStackLayout>
+</ContentPage>
