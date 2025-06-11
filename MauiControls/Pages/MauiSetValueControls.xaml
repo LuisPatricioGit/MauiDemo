@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiControls.Pages.MauiSetValueControls"
+             Title="MauiSetValueControls">
+    <VerticalStackLayout>
+        <Label Text="Clique na Check Box"/>
+        <CheckBox x:Name="CheckBox1"
+                  IsChecked="False"
+                  Color="CadetBlue"
+                  CheckedChanged="CheckBox1_CheckedChanged"
+                  HorizontalOptions="Start"/>
+        
+        <Label Text="Clique na Check Box"/>
+        <StackLayout Orientation="Horizontal">
+            <CheckBox x:Name="CheckBox2"
+              IsChecked="False"
+              Color="Blue"
+              CheckedChanged="CheckBox2_CheckedChanged"
+              HorizontalOptions="Start"/>
+            <CheckBox x:Name="CheckBox3"
+              IsChecked="False"
+              Color="Red"
+              CheckedChanged="CheckBox3_CheckedChanged"
+              HorizontalOptions="Start"/>
+        </StackLayout>
+
+        <StackLayout Padding="40">
+            <Label x:Name="lblSlider"
+                   HorizontalOptions="Center"/>
+            <Slider x:Name="slider1"
+                    Minimum="0"
+                    Maximum="10"
+                    MinimumTrackColor="Green"
+                    MaximumTrackColor="Red"
+                    ValueChanged="slider1_ValueChanged"
+                    ThumbImageSource="cao.png"
+                    ThumbColor="Beige" />
+        </StackLayout>
+
+        <StackLayout Margin="10">
+            <Stepper x:Name="stepper1"
+                     Minimum="2"
+                     Maximum="10"
+                     Increment="2"
+                     ValueChanged="stepper1_ValueChanged"
+                     HorizontalOptions="Start"/>
+            <Label x:Name="lblStepper"
+                   HorizontalOptions="Start"/>
+        </StackLayout>
+
+        <StackLayout Margin="10">
+            <Label Text="Switch"
+                   HorizontalOptions="Center"/>
+            <Switch x:Name="switch1"
+                    IsToggled="True"
+                    OnColor="Cyan"
+                    ThumbColor="CornflowerBlue"
+                    Toggled="switch1_Toggled"
+                    HorizontalOptions="Center"/>
+        </StackLayout>
+
+        <DatePicker MinimumDate="01/01/2020"
+                    MaximumDate="12/31/2030"
+                    Date="04/06/2025"
+                    DateSelected="DatePicker_DateSelected"
+                    HorizontalOptions="Center"
+                    Format="dd/MM/yyyy"/>
+
+        <TimePicker x:Name="time1"
+                    Time="10:00:00"
+                    Format="HH:mm:ss"
+                    PropertyChanged="TimePicker_PropertyChanged"
+                    HorizontalOptions="Center"/>
+    </VerticalStackLayout>
+</ContentPage>
