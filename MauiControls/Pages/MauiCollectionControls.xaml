@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiControls.Pages.MauiCollectionControls"
+             Title="Maui Collection Controls">
+    <!--<ScrollView>-->
+        <VerticalStackLayout >
+            <!--<Label Margin="10,10,10,10"
+                        Text="Galáxias"
+                        FontSize="Medium"/>-->
+
+            <!--<CarouselView ItemsSource="{Binding Fotos}"
+                              IndicatorView="indicatorView"
+                              CurrentItemChanged="CarouselView_CurrentItemChanged">
+
+                    <CarouselView.ItemsLayout>
+                        <LinearItemsLayout Orientation="Horizontal"/>
+                    </CarouselView.ItemsLayout>
+            
+                    <CarouselView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout>
+                                <Frame CornerRadius="5"
+                                       Margin="10"
+                                       HorizontalOptions="Center"
+                                       VerticalOptions="CenterAndExpand">
+                            
+                                    <StackLayout>
+                                        <Image Source="{Binding ImagemUrl}"
+                                               Aspect="AspectFill"
+                                               HeightRequest="400"
+                                               WidthRequest="400"/>
+                                        <Label Text="{Binding Nome}"
+                                               FontSize="Medium"
+                                               HorizontalOptions="Center"/>
+                                    </StackLayout>
+                                </Frame>
+                            </StackLayout>
+                        </DataTemplate>
+                    </CarouselView.ItemTemplate>
+                </CarouselView>
+
+                <IndicatorView x:Name="indicatorView"
+                               IndicatorColor="Gray"
+                               IndicatorSize="20"
+                               VerticalOptions="Center"
+                               HorizontalOptions="CenterAndExpand"
+                               SelectedIndicatorColor="Blue"/>-->
+
+            <!--<ListView x:Name="lv1"
+                          SeparatorColor="White"
+                          SeparatorVisibility="Default"
+                          SelectionMode="Single"
+                          ItemsSource="{Binding Fotos}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ImageCell Text="{Binding Nome}"
+                                       ImageSource="{Binding ImagemUrl}"
+                                       TextColor="Black"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+            </ListView>-->
+
+            <!--<CollectionView ItemsSource="{Binding Fotos}"
+                            VerticalOptions="Center"
+                            HorizontalOptions="Center"
+                            SelectionMode="Multiple"
+                            Margin="10">
+
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Orientation="Vertical" Span="2"/>
+                </CollectionView.ItemsLayout>
+                
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Padding="10">
+                            <Frame CornerRadius="5"
+                                   Margin="10"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="CenterAndExpand">
+                                <StackLayout>
+                                    <Image Source="{Binding ImagemUrl}"
+                                           Aspect="AspectFill"
+                                           HeightRequest="100"
+                                           WidthRequest="100"/>
+                                    <Label Text="{Binding Nome}"
+                                           FontSize="Medium"
+                                           HorizontalOptions="Center"/>
+                                </StackLayout>
+                            </Frame>
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>-->
+
+        <!--<Picker x:Name="picker"
+                Title="Selecione uma cidade">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Lisboa</x:String>
+                    <x:String>Porto</x:String>
+                    <x:String>Santarém</x:String>
+                    <x:String>Faro</x:String>
+                    <x:String>Beja</x:String>
+                    <x:String>Aveiro</x:String>
+                    <x:String>Bragança</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+        <Label Text="{Binding Source={x:Reference picker}, Path=SelectedItem}" />-->
+
+        <TableView Intent="Menu">
+            <TableRoot>
+                <!--<TableSection Title="Capitulos">
+                    <TextCell Text="1. Introdução ao .NET MAUI"
+                              Detail="Aprender os recursos do .NET MAUI"/>
+                    <TextCell Text="2. Anatomia de uma APP"
+                              Detail="Elementos Visuais do .NET MAUI"/>
+                    <TextCell Text="3. Texto"
+                              Detail="Controlos que mostram texto"/>
+                    <TextCell Text="4. Layout"
+                              Detail="Aprender a organizar as views na app"/>
+                    <TextCell Text="5. XAML e C#"
+                              Detail="Criar uma interface com o XAML e C#"/>
+                </TableSection>-->
+
+                <TableSection Title="Acessórios">
+                    <SwitchCell Text="Ar Condicionado Digital"
+                                On="True"/>
+                    <SwitchCell Text="Alarme Perimétrico"/>
+                    <SwitchCell Text="Direção Eletro-Hidráulica"/>
+                    <SwitchCell x:Name="alertaCinto"
+                                OnChanged="alertaCinto_OnChanged"
+                                Text="Alerta do Cinto de Segurança"/>
+                    <TextCell Text="Valor Total : 65.900,00"
+                              TextColor="Black"/>
+                    <EntryCell Placeholder="Insira o seu nome"/>
+                </TableSection>
+            </TableRoot>
+        </TableView>
+        <Button x:Name="btnProximo"
+                Text="Avançar"
+                VerticalOptions="End"/>
+    </VerticalStackLayout>
+    <!--</ScrollView>-->
+</ContentPage>
