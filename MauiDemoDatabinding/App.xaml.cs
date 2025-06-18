@@ -1,4 +1,6 @@
-﻿namespace MauiDemoDatabinding
+﻿using MauiDemoDatabinding.Pages;
+
+namespace MauiDemoDatabinding
 {
     public partial class App : Application
     {
@@ -6,7 +8,7 @@
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new NotifyBinding());
         }
 
         //protected override Window CreateWindow(IActivationState? activationState)
